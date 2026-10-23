@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistemas Operativos Open Source — TGPSI 12º P2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div>
+<nav><div class="wrap">
+<div class="logo">Open<span>Source</span> OS</div>
+<div class="links" id="links">
+<a href="#intro">Introdução</a><a href="#historia">História</a><a href="#versoes">Versões vs Distros</a><a href="#comparacao">Aberto vs Fechado</a><a href="#linux">Linux</a><a href="#instalacao">Instalação</a><a href="#comandos">Comandos</a><a href="#conclusao">Conclusão</a><a href="#webgrafia">Webgrafia</a>
+</div>
+<button id="theme" aria-label="Alternar tema">🌓</button>
+</div></nav>
+
+<header class="hero"><div class="wrap grid2">
+<div>
+<span class="pill">Módulo 4 · Sistemas Operativos</span>
+<h1>Sistemas Operativos <em>Open Source</em></h1>
+<p class="lead">Da filosofia do software livre ao Linux que corre em servidores, telemóveis e supercomputadores: história, conceitos, instalação e comandos essenciais.</p>
+<a class="btn" href="#historia">Começar</a><a class="btn o" href="#comandos">Ir para os comandos</a>
+</div>
+<div class="card meta">
+<div><b>Escola</b><span>Escola Secundária da Moita</span></div>
+<div><b>Curso</b><span>TGPSI</span></div>
+<div><b>Ano letivo</b><span>2026/2027</span></div>
+<div><b>Turma</b><span>12º P2</span></div>
+<div><b>Disciplina</b><span>Sistemas Operativos</span></div>
+<div><b>Aluno(s) / Nº</b><span>Queide  · Nº 13<br> Yeiver· Nº 17 </span></div>
+</div>
+</div></header>
+
+<section id="intro"><div class="wrap rv">
+<span class="eyebrow">01 · Introdução</span>
+<h2>O que é um sistema operativo?</h2>
+<p class="sub">É a primeira camada de software que faz funcionar o hardware e serve de intermediário entre este, o utilizador e as aplicações. Pode ser <b>fechado</b> (código-fonte privado) ou <b>aberto</b> (código-fonte público, que qualquer pessoa pode estudar, modificar e distribuir).</p>
+<div class="cols3">
+<div class="card"><div class="ico">🔓</div><h3>Código aberto</h3><p>O código pode ser lido, auditado e melhorado pela comunidade.</p></div>
+<div class="card"><div class="ico">⚖️</div><h3>Licenças livres</h3><p>GPL, BSD, MIT… definem o que se pode fazer com o software.</p></div>
+<div class="card"><div class="ico">🌍</div><h3>Comunidade global</h3><p>Milhares de voluntários e empresas colaboram no desenvolvimento.</p></div>
+</div></div></section>
+
+<section id="historia"><div class="wrap rv">
+<span class="eyebrow">02 · História</span>
+<h2>Evolução histórica do Linux e do software livre</h2>
+<p class="sub">O Linux não nasceu do nada: assenta no Unix e no projeto GNU.</p>
+<div class="tl">
+<div class="it"><div class="y">1969</div><p>Ken Thompson e Dennis Ritchie criam o Unix nos Bell Labs da AT&amp;T.</p></div>
+<div class="it"><div class="y">1983–85</div><p>Richard Stallman lança o projeto GNU (1983) e funda a Free Software Foundation (1985), com o objetivo de criar um sistema operativo totalmente livre.</p></div>
+<div class="it"><div class="y">1991</div><p>O estudante finlandês Linus Torvalds anuncia o seu kernel “Linux”. Combinado com as ferramentas GNU, forma o sistema GNU/Linux.</p></div>
+<div class="it"><div class="y">1993</div><p>Nascem o Debian e o Slackware, das distribuições mais antigas ainda ativas.</p></div>
+<div class="it"><div class="y">1998</div><p>É fundada a Open Source Initiative e o termo “open source” ganha força junto das empresas.</p></div>
+<div class="it"><div class="y">2004</div><p>Lançamento do Ubuntu, que populariza o Linux no desktop.</p></div>
+<div class="it"><div class="y">2008</div><p>Chega o primeiro telemóvel Android, baseado no kernel Linux.</p></div>
+<div class="it"><div class="y">Hoje</div><p>O Linux domina servidores, cloud, supercomputadores e dispositivos embebidos.</p></div>
+</div></div></section>
+
+<section id="versoes"><div class="wrap rv">
+<span class="eyebrow">03 · Versões e distribuições</span>
+<h2>Versão ≠ Distribuição</h2>
+<div class="vs">
+<div class="card"><h3>Versão <span class="tag">release</span></h3><p>Um ponto específico na evolução de <b>um mesmo software</b>. Ex.: kernel Linux 6.x, Ubuntu 24.04, Debian 12.</p><ul class="ck"><li>Numeração identifica correções e novidades</li><li>Pode ser LTS (suporte de longo prazo) ou estável/rolling</li></ul></div>
+<div class="card"><h3>Distribuição <span class="tag">distro</span></h3><p>Um <b>pacote completo</b> montado em torno do kernel: ferramentas GNU, gestor de pacotes, ambiente gráfico e configurações por defeito.</p><ul class="ck"><li>Cada distro tem objetivo e público próprios</li><li>Todas partilham o mesmo kernel base</li></ul></div>
+</div>
+<h3 style="margin:36px 0 14px">Distribuições populares</h3>
+<div class="tw"><table>
+<tr><th>Distro</th><th>Família</th><th>Gestor de pacotes</th><th>Ideal para</th></tr>
+<tr><td><b>Ubuntu</b></td><td>Debian</td><td>apt</td><td>Iniciantes, desktop e servidores</td></tr>
+<tr><td><b>Debian</b></td><td>Debian</td><td>apt</td><td>Estabilidade, servidores</td></tr>
+<tr><td><b>Fedora</b></td><td>Red Hat</td><td>dnf</td><td>Tecnologias recentes</td></tr>
+<tr><td><b>Arch Linux</b></td><td>Independente</td><td>pacman</td><td>Utilizadores avançados</td></tr>
+<tr><td><b>Linux Mint</b></td><td>Ubuntu/Debian</td><td>apt</td><td>Transição a partir do Windows</td></tr>
+<tr><td><b>Kali Linux</b></td><td>Debian</td><td>apt</td><td>Cibersegurança</td></tr>
+</table></div></div></section>
+
+<section id="comparacao"><div class="wrap rv">
+<span class="eyebrow">04 · Comparação</span>
+<h2>Código aberto vs código fechado</h2>
+<div class="vs">
+<div class="card"><h3>Open Source <span class="tag g">aberto</span></h3>
+<ul class="ck"><li>Gratuito ou de baixo custo</li><li>Código auditável e transparente</li><li>Altamente personalizável</li><li>Correções de segurança rápidas pela comunidade</li><li>Sem dependência de um único fornecedor</li></ul>
+<h3 style="margin-top:20px;font-size:16px">Desvantagens</h3>
+<ul class="ck x"><li>Suporte oficial nem sempre garantido</li><li>Menos software comercial nativo</li><li>Curva de aprendizagem maior</li></ul>
+<p style="margin-top:14px"><b>Exemplos:</b> Linux, FreeBSD, Android (AOSP), Chromium OS.</p></div>
+<div class="card"><h3>Código fechado <span class="tag r">proprietário</span></h3>
+<ul class="ck"><li>Suporte técnico oficial</li><li>Grande compatibilidade com software e hardware comerciais</li><li>Interface uniforme e familiar</li><li>Fácil para utilizadores não técnicos</li></ul>
+<h3 style="margin-top:20px;font-size:16px">Desvantagens</h3>
+<ul class="ck x"><li>Licenças pagas</li><li>Código não auditável</li><li>Dependência do fornecedor</li><li>Pouca margem de personalização</li></ul>
+<p style="margin-top:14px"><b>Exemplos:</b> Windows, macOS, iOS.</p></div>
+</div></div></section>
+
+<section id="linux"><div class="wrap rv">
+<span class="eyebrow">05 · Particularizar o Linux</span>
+<h2>Conceitos básicos e partes constituintes</h2>
+<p class="sub">Um sistema Linux é feito de camadas, cada uma com uma função clara.</p>
+<div class="grid2" style="align-items:start">
+<div class="layers">
+<div style="background:#7c3aed">Aplicações <small>Firefox, LibreOffice…</small></div>
+<div style="background:#4f46e5">Ambiente gráfico <small>GNOME, KDE, XFCE</small></div>
+<div style="background:#0ea5e9">Shell <small>bash, zsh</small></div>
+<div style="background:#16a34a">Bibliotecas e utilitários <small>GNU, glibc</small></div>
+<div style="background:#ea580c">Kernel Linux <small>núcleo do sistema</small></div>
+<div style="background:#475569">Hardware <small>CPU, RAM, discos</small></div>
+</div>
+<div class="cols2" style="grid-template-columns:1fr">
+<div class="card"><h3>Kernel</h3><p>Gere CPU, memória, processos e dispositivos. É o “Linux” propriamente dito.</p></div>
+<div class="card"><h3>Shell</h3><p>Interpretador de comandos: liga o utilizador ao kernel através do terminal.</p></div>
+<div class="card"><h3>Sistema de ficheiros</h3><p>Estrutura em árvore a partir de <code>/</code>. Tipos comuns: ext4, XFS, Btrfs.</p></div>
+<div class="card"><h3>Gestor de pacotes e bootloader</h3><p>Instala software (apt, dnf, pacman) e arranca o sistema (GRUB).</p></div>
+</div></div>
+<h3 style="margin:36px 0 14px">Diretórios principais</h3>
+<div class="tw"><table>
+<tr><th>Caminho</th><th>Função</th></tr>
+<tr><td><code>/</code></td><td>Raiz de todo o sistema</td></tr>
+<tr><td><code>/home</code></td><td>Pastas pessoais dos utilizadores</td></tr>
+<tr><td><code>/etc</code></td><td>Ficheiros de configuração</td></tr>
+<tr><td><code>/bin</code>, <code>/usr/bin</code></td><td>Programas e comandos</td></tr>
+<tr><td><code>/var</code></td><td>Dados variáveis e logs</td></tr>
+<tr><td><code>/dev</code></td><td>Ficheiros que representam dispositivos</td></tr>
+</table></div></div></section>
+
+<section id="instalacao"><div class="wrap rv">
+<span class="eyebrow">06 · Instalação e configuração</span>
+<h2>Como se instala uma distribuição</h2>
+<div class="tabs" id="tabs"><button class="on" data-t="p1">Antes de instalar</button><button data-t="p2">Processo</button><button data-t="p3">Depois de instalar</button></div>
+<div class="pane on" id="p1"><div class="cols3">
+<div class="card"><h3>Requisitos</h3><p>Verificar CPU, RAM, espaço em disco e compatibilidade de hardware.</p></div>
+<div class="card"><h3>Backup</h3><p>Guardar dados importantes antes de mexer em partições.</p></div>
+<div class="card"><h3>Escolher a distro</h3><p>Em função do objetivo: desktop, servidor, segurança, etc.</p></div>
+<div class="card"><h3>Modo de instalação</h3><p>Máquina virtual (VirtualBox), dual boot ou instalação completa.</p></div>
+</div></div>
+<div class="pane" id="p2"><ol class="steps">
+<li><b>Descarregar a ISO</b><span>Do site oficial da distribuição, verificando o checksum.</span></li>
+<li><b>Criar o suporte de arranque</b><span>Pen USB com Rufus ou balenaEtcher, ou ISO montada na VM.</span></li>
+<li><b>Arrancar pelo USB</b><span>Escolher o dispositivo no menu de arranque (BIOS/UEFI).</span></li>
+<li><b>Idioma, teclado e rede</b><span>Selecionar português e o layout de teclado correto.</span></li>
+<li><b>Particionar o disco</b><span>Mínimo: raiz <code>/</code> e swap; opcionalmente <code>/home</code> separada.</span></li>
+<li><b>Criar utilizador e palavra-passe</b><span>Definir fuso horário e nome da máquina.</span></li>
+<li><b>Concluir e reiniciar</b><span>Remover o USB e arrancar pelo GRUB.</span></li>
+</ol></div>
+<div class="pane" id="p3"><div class="cols3">
+<div class="card"><h3>Atualizar</h3><p><code>sudo apt update &amp;&amp; sudo apt upgrade</code></p></div>
+<div class="card"><h3>Drivers e codecs</h3><p>Instalar drivers gráficos e multimédia se necessário.</p></div>
+<div class="card"><h3>Segurança</h3><p>Ativar firewall (ufw) e usar palavras-passe fortes.</p></div>
+<div class="card"><h3>Software</h3><p>Instalar aplicações com o gestor de pacotes.</p></div>
+</div></div>
+</div></section>
+
+<section id="comandos"><div class="wrap rv">
+<span class="eyebrow">07 · Comandos Unix/Linux</span>
+<h2>Explorador de comandos</h2>
+<p class="sub">Pesquisa ou filtra por categoria. Clica num cartão para copiar o exemplo.</p>
+<div class="tools"><input id="q" placeholder="$ pesquisar comando…" autocomplete="off"><span id="cats"></span></div>
+<div class="cmds" id="cmds"></div>
+</div></section>
+
+<section id="conclusao"><div class="wrap rv"><div class="concl">
+<span class="eyebrow" style="color:#ffd7b0">08 · Conclusão</span>
+<h2>O poder de partilhar código</h2>
+<p>Os sistemas operativos open source mostram que a colaboração aberta pode produzir software robusto, seguro e flexível. O Linux, nascido de um projeto de estudante, é hoje a base de grande parte da infraestrutura digital mundial. Conhecer o seu funcionamento e a linha de comandos é uma competência essencial para qualquer técnico de gestão e programação de sistemas informáticos.</p>
+</div></div></section>
+
+<section id="webgrafia"><div class="wrap rv">
+<span class="eyebrow">09 · Webgrafia</span>
+<h2>Páginas consultadas</h2>
+<div class="card"><ul class="web">
+<li><a href="https://www.kernel.org" target="_blank" rel="noopener">kernel.org</a> — The Linux Kernel Archives</li>
+<li><a href="https://www.gnu.org" target="_blank" rel="noopener">gnu.org</a> — Projeto GNU</li>
+<li><a href="https://opensource.org" target="_blank" rel="noopener">opensource.org</a> — Open Source Initiative</li>
+<li><a href="https://www.debian.org" target="_blank" rel="noopener">debian.org</a> — Debian</li>
+<li><a href="https://ubuntu.com" target="_blank" rel="noopener">ubuntu.com</a> — Ubuntu</li>
+<li><a href="https://distrowatch.com" target="_blank" rel="noopener">distrowatch.com</a> — Distribuições Linux</li>
+<li><a href="https://www.linuxfoundation.org" target="_blank" rel="noopener">linuxfoundation.org</a> — Linux Foundation</li>
+</ul></div></div></section>
+
+<footer><div class="wrap">Escola Secundária da Moita · TGPSI · 12º P2 · Sistemas Operativos · Módulo 4 · 2026/2027</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
